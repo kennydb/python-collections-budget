@@ -3,7 +3,7 @@ import collections
 import matplotlib.pyplot as plt
 
 
-filepath = 'data/spending_data.csv'
+filepath = ".data/spending_data.csv"
 expenses = Expense.Expenses()
 expenses.read_expenses(filepath)
 
