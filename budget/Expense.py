@@ -46,16 +46,15 @@ class Expenses():
 
 
     def categorize_set_comprehension(self):
-        necessary_expenses = {}
-        for x in self.list:
-            if (x.category == 'Phone' or x.category == 'Auto and Gas' or
-                x.category == 'Classes' or x.category== 'Utilities' or
+        necessary_expenses = {x for x in self.list}
+        if (x.category == 'Phone' or x.category == 'Auto and Gas' or
+                x.category == 'Classes' or x.category == 'Utilities' or
                 x.category == 'Mortgage'):
-                food_expenses = x.category == 'Groceries' or x.category == 'Eating Out'
+            food_expenses = category == 'Groceries' or category == 'Eating Out'}
             else:
-                unnecessary_expenses = set(self.list)
-                set.remove(necessary_expenses, food_expenses)
-                return[necessary_expenses, food_expenses, unnecessary_expenses]
+            unnecessary_expenses = set(self.list)
+            set.remove(necessary_expenses, food_expenses)
+        return [necessary_expenses, food_expenses, unnecessary_expenses]
 
     divided_set_comp = expenses.categorize_set_comprehension()
 
