@@ -1,6 +1,5 @@
 import csv
 from datetime import datetime
-import timeit
 
 
 class Expense():
@@ -40,19 +39,22 @@ class Expenses():
                     food_expenses.add(i)
                 else:
                     unnecessary_expenses.add(i)
+                    divided_for_loop = expenses.categorize_for_loop
             
-            return [necessary_expenses, food_expenses, unnecessary_expenses]
+            return[necessary_expenses, food_expenses, unnecessary_expenses]
 
-        divided_for_loop = expenses.categorize_for_loop
+
+
     def categorize_set_comprehension(self):
         necessary_expenses = {}
         for x in self.list:
             if (x.category == 'Phone' or x.category == 'Auto and Gas' or
                 x.category == 'Classes' or x.category== 'Utilities' or
                 x.category == 'Mortgage'):
-                food_expenses = x.category == 'Groceries' | x.category == 'Eating Out'
+                food_expenses = x.category == 'Groceries' or x.category == 'Eating Out'
             else:
-                unnecessary_expenses = set.difference(necessary_expenses, food_expenses)
+                unnecessary_expenses = set(self.list)
+                set.remove(necessary_expenses, food_expenses)
                 return[necessary_expenses, food_expenses, unnecessary_expenses]
 
     divided_set_comp = expenses.categorize_set_comprehension()
