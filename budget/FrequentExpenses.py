@@ -1,9 +1,10 @@
-from budget import Expense
+from Expense import *
 import collections
 import matplotlib.pyplot as plt
 
-expenses = Expense.Expenses()
-expenses.read_expenses('..//data//spending_data.csv')
+filepath = '../data/spending_data.csv'
+expenses = Expenses()
+expenses.read_expenses(filepath)
 
 spending_categories = []
 for expense in expenses.list:

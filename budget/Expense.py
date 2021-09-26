@@ -1,6 +1,7 @@
 import csv
 from datetime import datetime
 
+
 class Expense():
     def __init__(self, date_str, vendor, category, amount):
         self.date_time = datetime.strptime(date_str, '%m/%d/%Y %H:%M:%S')
