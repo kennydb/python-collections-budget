@@ -1,5 +1,4 @@
-import Expense
-from budget import *
+from . import Expense
 import collections
 import matplotlib.pyplot as plt
 
