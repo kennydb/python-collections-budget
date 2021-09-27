@@ -27,34 +27,37 @@ class Expenses():
                 self.sum += amount
 
     def categorize_for_loop(self):
-            necessary_expenses = set()
-            food_expenses = set()
-            unnecessary_expenses = set()
-            for i in self.list:
-                if (i.category == 'Phone'    or i.category == 'Auto and Gas' or 
-                    i.category == 'Classes'  or i.category == 'Utilities' or 
-                    i.category == 'Mortgage'): 
-                    necessary_expenses.add(i)
-                elif(i.category == 'Groceries' or i.category == 'Eating Out'):
-                    food_expenses.add(i)
-                else:
-                    unnecessary_expenses.add(i)
-                    divided_for_loop = expenses.categorize_for_loop
+        necessary_expenses = set()
+        food_expenses = set()
+        unnecessary_expenses = set()
+        for i in self.list:
+            if (i.category == 'Phone'    or i.category == 'Auto and Gas' or
+                i.category == 'Classes'  or i.category == 'Utilities' or
+                i.category == 'Mortgage'):
+                necessary_expenses.add(i)
+            elif(i.category == 'Groceries' or i.category == 'Eating Out'):
+                food_expenses.add(i)
+            else:
+                unnecessary_expenses.add(i)
+                divided_for_loop = expenses.categorize_for_loop
             
             return[necessary_expenses, food_expenses, unnecessary_expenses]
 
 
 
-    def categorize_set_comprehension(self):
+    def categorize_set_comprehension(self, x=None):
         necessary_expenses = {x for x in self.list}
-        if (x.category == 'Phone' or x.category == 'Auto and Gas' or
-                x.category == 'Classes' or x.category == 'Utilities' or
-                x.category == 'Mortgage'):
-            food_expenses = category == 'Groceries' or category == 'Eating Out'}
+        for x in self.list:
+            if (x.category == 'Phone' or x.category == 'Auto and Gas' or
+                    x.category == 'Classes' or x.category == 'Utilities' or
+                    x.category == 'Mortgage') in self.list:
+                necessary_expenses.add(x)
+
             else:
-            unnecessary_expenses = set(self.list)
-            set.remove(necessary_expenses, food_expenses)
-        return [necessary_expenses, food_expenses, unnecessary_expenses]
+                food_expenses = x.category == 'Groceries' or x.category == 'Eating Out'
+                unnecessary_expenses = set(self.list)
+                set.remove(necessary_expenses, food_expenses)
+            return [necessary_expenses, food_expenses, unnecessary_expenses]
 
     divided_set_comp = expenses.categorize_set_comprehension()
 
