@@ -2,7 +2,7 @@ import pytest
 import matplotlib
 matplotlib.use('Agg')
 from .utils import get_assignments, get_calls, get_for_loops
-import FrequentExpenses
+from budget import FrequentExpenses
 from os import path
 
 

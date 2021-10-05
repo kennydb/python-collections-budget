@@ -1,6 +1,4 @@
-from . import Expense
-import matplotlib.pyplot as plt
-import timeit
+from budget import Expense
 
 
 def main():
@@ -20,6 +18,7 @@ def main():
     #               expenses = Expense.Expenses(),
     # expenses.read_expenses('data/spending_data.csv'),
     #               , number = 100000, globals=globals())
+
 
 if __name__ == "__main__":
     main()

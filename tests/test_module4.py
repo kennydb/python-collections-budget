@@ -1,7 +1,7 @@
 import pytest
 import ast
 from tests import utils
-import ExpenseCategories
+from budget import ExpenseCategories
 
 
 def load_ast_tree(filename):

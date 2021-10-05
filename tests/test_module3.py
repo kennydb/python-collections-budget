@@ -1,7 +1,7 @@
 import pytest
 import ast
 from tests import utils
-import BudgetList
+from budget import BudgetList
 
 
 def load_ast_tree(filename):
