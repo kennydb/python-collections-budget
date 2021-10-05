@@ -27,8 +27,7 @@ def test_task2_module5():
     expected_timeit_str_2 = 'timeit:timeit:stmt:expenses.categorize_for_loop():setup:\n from . import Expense\nexpenses = Expense.Expenses()\nexpenses.read_expenses(\'data/spending_data.csv\')\n:number:100000:globals:globals'
 
     for x in calls:
-        if (expected_timeit_str in x.replace(" ", "") or 
-            expected_timeit_str_2.replace(" ", "") in x.replace(" ", "")):
+        if (expected_timeit_str in x.replace(" ", "") or expected_timeit_str_2.replace(" ", "") in x.replace(" ", "")):
             found_timeit_call = True
 
     message = 'Did you call `timeit.timeit()`?'
