@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 from budget import Expense
 import timeit
 
@@ -18,6 +20,13 @@ def main():
     print(timeit.timeit(stmt="expenses.categorize_for_loop()", setup='''pass''',
                         number=100000, globals=globals()))
 
+    fig, ax = plt.subplots()
+    labels = ['Necessary', 'Food', 'Unnecessary']
+    for catefory_exps in divided_set_comp
+
+    divided_expenses_sum
+    labels = labels
+    autopct = '%1.1f%%'
 
 if __name__ == "__main__":
     main()
