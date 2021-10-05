@@ -48,8 +48,11 @@ class Expenses():
                                                        x.category == 'Classes' or x.category == 'Utilities' or
                                                        x.category == 'Mortgage') in self.list}
         necessary_expenses.add(x.category)
+
         food_expenses = {x for x in self.list if x.category == 'Groceries' or x.category == 'Eating Out'}
-        unnecessary_expenses = set(list) - (necessary_expenses + food_expenses)
+
+        unnecessary_expenses = self.list - (necessary_expenses + food_expenses)
+
         return [necessary_expenses, food_expenses, unnecessary_expenses]
 
         divided_set_comp = categorize_set_comprehension()
