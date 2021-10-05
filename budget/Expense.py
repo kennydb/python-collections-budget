@@ -52,7 +52,7 @@ class Expenses():
         unnecessary_expenses = set(list) - (necessary_expenses + food_expenses)
         return [necessary_expenses, food_expenses, unnecessary_expenses]
 
-    divided_set_comp = categorize_set_comprehension()
+        divided_set_comp = categorize_set_comprehension()
 
     # if not divided_set_comp() == divided_for_loop():
     #     print('Sets are NOT equal by == test')
