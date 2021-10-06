@@ -1,4 +1,4 @@
-from . import Expense
+import Expense
 import collections
 import matplotlib.pyplot as plt
 
